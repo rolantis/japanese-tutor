@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MODULES_DIR = ROOT / "modules"
 TEMPLATES_DIR = ROOT / "tools" / "templates"
 OUT_DIR = ROOT / "public"
-GITHUB_BLOB = "https://github.com/rolivischi2/japanese-tutor/blob/main"
+GITHUB_BLOB = "https://github.com/rolantis/japanese-tutor/blob/main"
 
 
 @dataclass
@@ -826,7 +826,7 @@ def run_self_tests() -> int:
     # external md → GitHub blob
     src = '<a href="../../pronunciation/07-hungarian-transfer-notes.md">X</a>'
     got = rewrite_links(src, current)
-    if "github.com/rolivischi2/japanese-tutor/blob/main/pronunciation/07-" not in got:
+    if "github.com/rolantis/japanese-tutor/blob/main/pronunciation/07-" not in got:
         failures.append(f"rewrite_links external-md: got {got!r}")
 
     # module-vocab.json#anchor → vocab.html#anchor (sibling)
